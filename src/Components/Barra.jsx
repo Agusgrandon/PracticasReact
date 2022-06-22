@@ -11,7 +11,7 @@ class Barra extends Component{
       <a className="nav-link" href="#">Mates</a>
     </li>
     <li className="nav-item">
-      <a className="nav-link" href="#">Accesorios</a>
+    <a className="nav-link" href="#">Termos</a>
     </li>
     <li className="nav-item">
       <a className="nav-link" href="#">Yerba</a>
