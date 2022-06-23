@@ -1,7 +1,8 @@
 //@ts-check
 import './App.css';
 import Titulo from './Components/Titulo';
-import Barra from './Components/Barra';
+import CartWidget from './Components/CartWidget';
+import NavBar from './Components/NavBar';
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <div className="App">
        <header className="App-header">
        <Titulo></Titulo>
-       <Barra></Barra>
+       <NavBar/>
+       <CartWidget/>
        </header>
     </div>
   );
