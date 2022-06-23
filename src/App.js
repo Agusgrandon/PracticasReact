@@ -4,6 +4,7 @@ import Titulo from './Components/Titulo';
 import CartWidget from './Components/CartWidget';
 import NavBar from './Components/NavBar';
 import ItemListContainer from './Components/ItemListContainer';
+import ItemCount from './Components/ItemCount';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
        </header>
        <main>
        <ItemListContainer msg= "Las últimas novedades"/>
+       <ItemCount/>
        </main>
     </div>
   );
