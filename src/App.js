@@ -7,7 +7,15 @@ import ItemListContainer from './Components/ItemListContainer';
 import ItemCount from './Components/ItemCount';
 
 
+
 function App() {
+
+  let initial = 1
+  let stock = 5
+
+  function onAdd(valor) {
+    alert("usted agrego" + valor + "producto al carrito")
+  }
   return (
     <div className="App">
        <header className="App-header">
@@ -17,7 +25,7 @@ function App() {
        </header>
        <main>
        <ItemListContainer msg= "Las últimas novedades"/>
-       <ItemCount/>
+       <ItemCount stock={stock} initial={initial} onAdd={onAdd}/>
        </main>
     </div>
   );
