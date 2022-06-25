@@ -8,6 +8,7 @@ import ItemCount from './Components/ItemCount';
 
 
 
+
 function App() {
 
   let initial = 1
@@ -20,6 +21,7 @@ function App() {
     <div className="App">
        <header className="App-header">
        <Titulo></Titulo>
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIhnKXvVnsrmtTfSWr6b30lxWBO4Da4VQjRA&usqp=CAU" className="icono" alt="" />
        <NavBar/>
        <CartWidget/>
        </header>
