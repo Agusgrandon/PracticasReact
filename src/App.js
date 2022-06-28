@@ -26,7 +26,7 @@ function App() {
        <CartWidget/>
        </header>
        <main>
-       <ItemListContainer msg= "Las últimas novedades"/>
+       <ItemListContainer greeting= "Las últimas novedades"/>
        <ItemCount stock={stock} initial={initial} onAdd={onAdd}/>
        </main>
     </div>
