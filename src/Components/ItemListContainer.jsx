@@ -4,17 +4,15 @@ import ItemList from "./ItemList";
 import './ItemListContainer.css';
 
 export default function ItemListContainer({greeting}) {
+  const  [productlist, setProductlist] = useState ([]);
 
-const  [productlist, setProductlist] = useState ([])
-
-useEffect (() => {
-  let productos =  [  
-    {id: "1", title: "mate", price: "2000", pictureURL: "https://www.cleanipedia.com/images/iohqr4whhl17/77WTkW5a5Cz0T3gVY9bFYP/b5c637fe5e05d0a5d4b16dbf717cecdf/MTEuanBn/990w-660h/mate-de-calabaza-y-yerba.jpg"}
+useEffect(() => {
+  let products =  [  
+    {id: "1", title: "mate", price: "2000", pictureURL: "https://th.bing.com/th/id/OIP._Q0Zolf0wmseFfvbSwR9BQHaFj?w=204&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"}
   ];
-  
-  new Promise ((resolve, reject) =>{
+  new Promise((resolve, reject) => {
     setTimeout(()=>{
-      resolve(productos)
+      resolve(products)
     }, 2000)
   }).then((res)=>{
     setProductlist(res)
