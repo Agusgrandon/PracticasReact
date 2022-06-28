@@ -8,7 +8,7 @@ export default function ItemListContainer({greeting}) {
 
 useEffect(() => {
   let products =  [  
-    {id: "1", title: "mate", price: "2000", pictureURL: "https://th.bing.com/th/id/OIP._Q0Zolf0wmseFfvbSwR9BQHaFj?w=204&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"}
+    {id: "1", title: "mate", price: "2000", pictureURL: "https://www.mateandco.com.ar/wp-content/uploads/2022/02/Mates-madera-bombilla-corazon-web-verde-agua-768x768.jpg"}
   ];
   new Promise((resolve, reject) => {
     setTimeout(()=>{

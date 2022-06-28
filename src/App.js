@@ -15,7 +15,7 @@ function App() {
   let stock = 5
 
   function onAdd(valor) {
-    alert("usted agrego" + valor + "producto al carrito")
+    alert("¡Agregado al carrito!")
   }
   return (
     <div className="App">
