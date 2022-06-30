@@ -1,9 +1,13 @@
 import React from "react";
+import mate from './img/iconomate2.jpg'
 import './NavBar.css';
 
 
 export default function NavBar() {
-  return <ul className="nav justify-content-center">
+  return <>
+  <h1 className="titulo">PLAYADITO</h1>
+  <img src={mate} className="icono" alt="mate" />
+  <ul className="nav justify-content-center">
    <li className="nav-item">
      <a className="nav-link" href="#">Home</a>
    </li>
@@ -17,4 +21,5 @@ export default function NavBar() {
      <a className="nav-link" href="#">Yerba</a>
    </li>
  </ul>
+ </>
 }

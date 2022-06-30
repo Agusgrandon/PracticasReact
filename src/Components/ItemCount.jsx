@@ -5,12 +5,12 @@ export default function ItemCount({stock, initial, onAdd}) {
     const [auxInitial, setAuxInitial] = useState(initial);
 
     function restar() {
-        if (auxInitial != 1){
+        if (auxInitial !== 1){
             setAuxInitial(auxInitial - 1);
         }}
 
     function sumar(){
-        if (auxInitial != stock){
+        if (auxInitial !== stock){
             setAuxInitial(auxInitial + 1);
         }}  
     
