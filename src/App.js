@@ -27,6 +27,9 @@ function App() {
        <br/>
        <br/>
        <br/>
+       <br/>
+       <br/>
+       <br/>
        <ItemListContainer greeting= "Las últimas novedades"/>
        <ItemCount stock={stock} initial={initial} onAdd={onAdd}/>
        </main>
