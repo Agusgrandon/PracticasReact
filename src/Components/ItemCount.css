@@ -1,3 +1,9 @@
 .contador{
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.carrito{
+    text-align: center;
 }

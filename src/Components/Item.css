@@ -11,3 +11,22 @@
     background-color: #abc1b5;
     color: black;
 }
+.producto{
+    font-family: cursive;
+}
+.precio{
+    font-family: cursive;
+}
+.carrito{
+    font-family: cursive;
+    text-align: center;
+}
+.link{
+    text-decoration: none;
+    text-align: right;
+    color: black;
+    font-family: cursive;
+}
+.link:hover{
+    color: green;
+}
