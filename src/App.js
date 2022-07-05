@@ -20,8 +20,8 @@ function App() {
     <Routes>
     <Route path="/" element={<ItemListContainer greeting={"Todos nuestros productos"}/>} />
     <Route path="/category/:id" element={<ItemListContainer greeting={"Todos nuestros productos"}/>} />
-    <Route path="/item/:id" element={<ItemDetailContainer/>} />
-    <Route path="/" element={<CartWidget/>} />
+    <Route path="/item/:idItem" element={<ItemDetailContainer/>} />
+    <Route path="/CartWidget" element={<CartWidget/>} />
     </Routes>
     <div><Footer/></div>
     </BrowserRouter>
