@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './ItemCount.css';
 
 
 export default function ItemCount({stock, initial, onAdd}) {
@@ -16,9 +17,9 @@ export default function ItemCount({stock, initial, onAdd}) {
     
     return (
         <div className="bg-light contador">
-           <div><button type="button" className="btn btn-outline-danger" onClick={() => restar()}>-</button></div>
+           <div className="primerBoton"><button type="button" className="btn btn-outline-danger btn-sm btn-block" onClick={() => restar()}>-</button></div>
            <div className="text-dark num">{auxInitial}</div>
-           <div><button type="button" className="btn btn-outline-success" onClick={() => sumar()}>+</button></div>
-           <button type="button" className="btn btn-outline-info" onClick={() => onAdd(auxInitial)}>Agregar al carrito</button>
+           <div className="segundoBoton"><button type="button" className="btn btn-outline-success botones btn-sm btn-block" onClick={() => sumar()}>+</button></div>
+           <button type="button" className="btn btn-outline-info btn-sm" onClick={() => onAdd(auxInitial)}>Agregar al carrito</button>
         </div>
     )}
