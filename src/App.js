@@ -5,6 +5,7 @@ import CartWidget from './Components/CartWidget';
 import NavBar from './Components/NavBar';
 import ItemListContainer from './Components/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer';
+import Footer from './Components/Footer';
 
 
 
@@ -22,6 +23,7 @@ function App() {
     <Route path="/item/:id" element={<ItemDetailContainer/>} />
     <Route path="/" element={<CartWidget/>} />
     </Routes>
+    <div><Footer/></div>
     </BrowserRouter>
     </>
   );
