@@ -1,6 +1,8 @@
 import React from "react";
 import mate from './img/iconomate2.jpg'
 import './NavBar.css';
+import './CartWidget.css';
+import CartWidget from "./CartWidget";
 
 
 export default function NavBar() {
@@ -20,6 +22,7 @@ export default function NavBar() {
    <li className="nav-item">
      <a className="nav-link" href="#">Yerba</a>
    </li>
+   <CartWidget/>
  </ul>
  </>
 }
