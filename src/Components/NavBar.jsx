@@ -5,6 +5,7 @@ import './CartWidget.css';
 import CartWidget from "./CartWidget";
 
 
+
 export default function NavBar() {
   return <>
   <h1 className="titulo">PLAYADITO</h1>
