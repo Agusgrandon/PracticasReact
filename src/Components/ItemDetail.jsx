@@ -1,11 +1,17 @@
 //@ts-check
-import React from "react";
+import { createContext } from 'react';
 import ItemCount from "./ItemCount";
+import {myContext} from "./Components/CartContext";
 
 
 export default function ItemDetail({ itemProducto }) {
-    function onAdd(){
+
+  const {addItem} = useContext(myContext);
+    function onAdd(productos, stock){
+      if((productos>0)&&(stock>0)){ 
+        addItem(itemProducto, productos);
         alert("¡Agregado al carrito!")
+      }
       }
     
  return(
