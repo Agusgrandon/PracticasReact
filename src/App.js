@@ -5,12 +5,17 @@ import NavBar from './Components/NavBar';
 import ItemListContainer from './Components/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer';
 import Footer from './Components/Footer';
+import CartContext from "./Components/CartContext";
+import {myContext} from "./Components/CartContext";
+import { useContext } from "react";
 
 
 
 
 
 function App() {
+
+  const {addItem, removeItem, clear, setCart, setvaciarCarrito} = useContext(myContext);
 
   return (
     <>
