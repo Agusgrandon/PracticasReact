@@ -9,6 +9,7 @@ export default function CartContext({ children }) {
   const [cantItems, setCantItems] = useState(0);
   const [total, setTotal] = useState(0)
   const [carritoVacio, setCarritoVacio] = useState(true)
+  const [menu, setMenu]  = useState(false);
 
 
   function addItem(item, quantity) {
@@ -19,7 +20,12 @@ export default function CartContext({ children }) {
       productoCarrito[indexProducto].quantity = Number(productoCarrito[indexProducto].quantity) + Number(quantity);
       setCarrrito(productoCarrito);
       setCantItems(productoCarrito.reduce((acc, element)=> acc + element.quantity, 0));
-      setTotal(productoCarrito.reduce((acc, element) => acc + element.price*element.quantity, 0) );
+      setTotal(productoCarrito.reduce((acc, elemento) => acc + elemento.price*elemento.quantity, 0) );
+    }else{
+      const productosCarrito = [...carrito, {...item, quantity:quantity }];
+      setCarrrito(productosCarrito)
+      setCantItems(productosCarrito.reduce((acc, element)=> acc + element.quantity, 0));
+      setTotal(productosCarrito.reduce((acc, elemento) => acc + elemento.price*elemento.quantity, 0) );
     }
   }
 
@@ -28,7 +34,7 @@ export default function CartContext({ children }) {
     eliminarProducto ===[] && setCarritoVacio(true);
     setCarrrito(eliminarProducto);
     setCantItems(eliminarProducto.reduce((acc, element)=> acc + element.quantity, 0));
-    setTotal(eliminarProducto.reduce((acc, element) => acc + element.price*element.quantity, 0) );
+    setTotal(eliminarProducto.reduce((acc, elemento) => acc + elemento.price*elemento.quantity, 0) );
 
   }
 
@@ -42,6 +48,9 @@ export default function CartContext({ children }) {
 
   const isInCart = (id) => {
     return carrito.find((el) => el.id === id);
+  }
+  const value = {
+    menu : [menu, setMenu] 
   }
 
   return (
