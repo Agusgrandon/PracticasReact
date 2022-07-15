@@ -3,10 +3,20 @@ import mate from './img/iconomate2.jpg'
 import './NavBar.css';
 import './CartWidget.css';
 import CartWidget from "./CartWidget";
+import { useContext } from 'react';
+import { MyContext } from './CartContext';
 
 
 
 export default function NavBar() {
+
+  const value = useContext(MyContext);
+  const [menu, setMenu] = value.menu;
+
+  const verMenu = () =>{
+    setMenu(!menu)
+  }
+
   return <>
   <h1 className="titulo">PLAYADITO</h1>
   <img src={mate} className="icono" alt="mate" />

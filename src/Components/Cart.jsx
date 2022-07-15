@@ -5,7 +5,7 @@ import { MyContext } from './CartContext';
 
 
 export default function Cart() {
-    const { carrito, removeItem, clear, carritoVacio, total, value } = useContext(MyContext);
+    const { removeItem, clear, value } = useContext(MyContext);
     //para que aparesca en carrito
     const [menu, setMenu] = value.menu
     // para que se muestre si tiene productos
@@ -20,8 +20,10 @@ export default function Cart() {
                     <table>
                         <thead>
                             <tr>
-                                <th></th>
-                                <th></th>
+                                <th>"imagen"</th>
+                                <th>"titulo"</th>
+                                <th>"precio"</th>
+                                <th>"total"</th>
                             </tr>
                         </thead>
                     </table>
