@@ -1,5 +1,5 @@
 //@ts-check
-import { createContext } from 'react';
+import { createContext, useState } from 'react';
 
 export const MyContext = createContext();
 
@@ -25,10 +25,10 @@ export default function CartContext({ children }) {
 
   function removeItem(itemId) {
     const eliminarProducto = carrito.filter((el) => el.id !== itemId );
-    eliminarProducto===[] && setCarritoVacio(true);
-    setCarrrito(eliminarProducto)
+    eliminarProducto ===[] && setCarritoVacio(true);
+    setCarrrito(eliminarProducto);
     setCantItems(eliminarProducto.reduce((acc, element)=> acc + element.quantity, 0));
-    setImporteTotal(eliminarProducto.reduce((acc, element) => acc + element.price*element.quantity, 0) );
+    setTotal(eliminarProducto.reduce((acc, element) => acc + element.price*element.quantity, 0) );
 
   }
 
@@ -41,7 +41,7 @@ export default function CartContext({ children }) {
   }
 
   const isInCart = (id) => {
-    return cart.find((el) => el.id === id);
+    return carrito.find((el) => el.id === id);
   }
 
   return (

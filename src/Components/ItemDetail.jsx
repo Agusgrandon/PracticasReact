@@ -1,11 +1,16 @@
 //@ts-check
-import { createContext } from 'react';
+import React from 'react'
+import { useContext } from 'react';
+import { MyContext } from './CartContext';
 import ItemCount from "./ItemCount";
 
 
 
 
 export default function ItemDetail({ itemProducto }) {
+
+
+  const {addItem} = useContext(MyContext);
 
     function onAdd(){
         alert("¡Agregado al carrito!")
@@ -22,6 +27,7 @@ export default function ItemDetail({ itemProducto }) {
         <br />
         <br />
         <ItemCount stock={5} initial={1} onAdd={onAdd} />
+        <button type="button" className='btn btn-outline-success'>Finalizar compra</button>
       </div>
     </div>
     </> 
