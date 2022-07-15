@@ -6,4 +6,10 @@ import { MyContext } from './CartContext';
 
 export default function Cart(){
     const {carrito, removeItem, clear, carritoVacio, total} = useContext(MyContext);
+
+    return (
+        <>
+        
+        </>
+      );
 }
