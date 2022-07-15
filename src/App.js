@@ -5,9 +5,8 @@ import NavBar from './Components/NavBar';
 import ItemListContainer from './Components/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer';
 import Footer from './Components/Footer';
-import CartContext from "./Components/CartContext";
-import {myContext} from "./Components/CartContext";
-import { useContext } from "react";
+import Cart from './Components/Cart';
+
 
 
 
@@ -15,7 +14,7 @@ import { useContext } from "react";
 
 function App() {
 
-  const {addItem, removeItem, clear, setCart, setvaciarCarrito} = useContext(myContext);
+
 
   return (
     <>
@@ -24,9 +23,10 @@ function App() {
     <NavBar/>
     </header>
     <Routes>
-    <Route path="/" element={<ItemListContainer greeting={"Todos nuestros productos"}/>} />
-    <Route path="/category/:idCategory" element={<ItemListContainer greeting={"Todos nuestros productos"}/>} />
+    <Route path="/" element={<ItemListContainer/>} />
+    <Route path="/category/:idCategory" element={<ItemListContainer/>} />
     <Route path="/item/:idItem" element={<ItemDetailContainer/>} />
+    <Route path="/cart" element={<Cart/>} />
     </Routes>
     <div><Footer/></div>
     </BrowserRouter>

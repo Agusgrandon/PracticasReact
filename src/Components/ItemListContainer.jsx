@@ -52,7 +52,7 @@ export default function ItemListContainer({ greeting }) {
       <br />
       <br />
       <br />
-      <h2 className="segundoTitulo">{greeting}</h2>
+      <h2 className="segundoTitulo">Todos los productos</h2>
       <br />
       <br />
       <br />
