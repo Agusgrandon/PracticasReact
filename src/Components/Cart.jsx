@@ -8,7 +8,7 @@ export default function Cart() {
     const { carrito, removeItem, clear, carritoVacio, total, value } = useContext(MyContext);
     //para que aparesca en carrito
     const [menu, setMenu] = value.menu
-
+    // para que se muestre si tiene productos
     const show1 = menu ? "carritos show" : "carritos";
     const show2 = menu ? "carrito show" : "carrito";
 
@@ -20,8 +20,8 @@ export default function Cart() {
                     <table>
                         <thead>
                             <tr>
-                                <th>{carrito}</th>
-                                <th>{total}</th>
+                                <th></th>
+                                <th></th>
                             </tr>
                         </thead>
                     </table>
